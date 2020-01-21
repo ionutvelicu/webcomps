@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/webcomps.esm.js"></script>
+  <script nomodule src="/build/webcomps.js"></script>
+
+</head>
+<body>
+  <style>
+    #container {
+      display: flex;
+      padding: 2rem;
+      align-items: center;
+      flex-direction: column;
+    }
+    #container app-button {
+      margin: 0 0 1rem;
+    }
+  </style>
+
+  <div id="container">
+    <app-button color="blue">Click Me!</app-button>
+    <app-button color="blue">Click Me More!</app-button>
+  </div>
+
+  <script>
+      const onAppButtonClick = function (ev) {
+          if (ev.detail.count === 5) {
+              this.setAttribute('color', 'red');
+          }
+      }
+
+      document.querySelectorAll('app-button').forEach(it => {
+          console.log(it);
+          it.addEventListener('custom-click', onAppButtonClick.bind(it));
+      });
+  </script>
+</body>
+</html>

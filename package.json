@@ -1,19 +1,28 @@
 {
   "name": "webcomps",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/webcomps/webcomps.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionutvelicu/webcomps.git"
+  "devDependencies": {
+    "@stencil/core": "^1.8.4"
   },
-  "author": "Ionut Velicu",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ionutvelicu/webcomps/issues"
-  },
-  "homepage": "https://github.com/ionutvelicu/webcomps#readme"
+  "license": "MIT"
 }
