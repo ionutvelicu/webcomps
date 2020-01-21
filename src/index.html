@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./src/app-button.js"></script>
+</head>
+<body>
+<style>
+    #container {
+        display: flex;
+        padding: 2rem;
+        align-items: center;
+        flex-direction: column;
+    }
+    #container app-button {
+        margin: 0 0 1rem;
+    }
+</style>
+
+<div id="container">
+    <app-button color="blue">Click Me!</app-button>
+    <app-button color="blue">Click Me More!</app-button>
+</div>
+
+<script>
+    const onAppButtonClick = function (ev) {
+        if (ev.detail.count === 5) {
+            this.setAttribute('color', 'red');
+        }
+    }
+
+    document.querySelectorAll('app-button').forEach(it => {
+        console.log(it);
+        it.addEventListener('custom-click', onAppButtonClick.bind(it));
+    });
+</script>
+</body>
+</html>
