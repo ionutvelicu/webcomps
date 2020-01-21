@@ -1,0 +1,19 @@
+{
+  "name": "webcomps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionutvelicu/webcomps.git"
+  },
+  "author": "Ionut Velicu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ionutvelicu/webcomps/issues"
+  },
+  "homepage": "https://github.com/ionutvelicu/webcomps#readme"
+}
