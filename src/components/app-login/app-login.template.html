@@ -1,0 +1,56 @@
+<style>
+    #root {
+        text-align: center;
+        font-family: var(--font-family);
+    }
+    .logo {
+        width: 268px;
+        margin: calc(2 * var(--general-padding)) 0 var(--general-padding);
+    }
+    .avatar {
+        width: 100px;
+    }
+    .container {
+        box-sizing: border-box;
+        width: 350px;
+        padding: calc(.75 * var(--general-padding)) var(--general-padding);
+        margin: 0 auto;
+        background: #EEF5F6;
+    }
+    .err {
+        margin: 0 auto;
+        width:350px;
+        background: #c20000;
+        color: #FFF;
+        font-weight: 500;
+        font-size: .8em;
+        padding: calc(.5 * var(--general-padding)) ;
+        box-sizing: border-box;
+        display: none;
+    }
+    paper-input {
+        text-align: left;
+    }
+    h3 {
+        color: var(--text-color);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    app-button {
+        display: inline-block;
+        margin-top: calc(var(--general-padding) / 2);
+        width: 100%;
+    }
+</style>
+<div id="root">
+    <img class="logo" src="/assets/logo.svg" />
+
+    <div id="err" class="err"></div>
+    <div class="container">
+        <img class="avatar" src="/assets/female.svg" />
+        <h3>Willkommen!</h3>
+        <paper-input id="name" always-float-label label="Benutzer" type="text" placeholder="Benutzer"></paper-input>
+        <paper-input id="pass" always-float-label label="Passwort" type="password" placeholder="Passwort"></paper-input>
+        <app-button full="true">Anmeldung</app-button>
+    </div>
+</div>

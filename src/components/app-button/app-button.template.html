@@ -1,0 +1,27 @@
+<style>
+    a {
+        background-color: var(--primary);
+        color: #FFF;
+        text-transform: uppercase;
+        border-radius: var(--border-radius);
+        padding: var(--btn-padding);
+        border: 1px solid #2b4154;
+        font-family: var(--font-family);
+        display: inline-block;
+        user-select: none;
+        cursor: pointer;
+    }
+    .loading {
+        display: none;
+    }
+    a.block {
+        display: block;
+    }    
+    a:hover {
+        background-color: var(--primary-hover);
+    }
+</style>
+<a>
+    <slot></slot>
+    <span class="loading">...</span>
+</a>

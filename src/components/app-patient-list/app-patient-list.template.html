@@ -1,0 +1,66 @@
+<style>
+    body, 
+    #root {
+        background: #F4F4F4;
+        min-height: 100vh;
+    }
+    #list,
+    header {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    header,
+    #list .line {
+        display: flex;
+        border-bottom: 2px solid #F4F4F4;
+        align-items: center;
+    }
+
+    header span,
+    #list .line span {
+        flex: 1;
+        background: #FFF;
+        height: 100%;
+        border-right: 2px solid #F4F4F4;
+        height: 60px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: var(--font-family);
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+    }
+
+    header span.check,
+    #list .line span.check {
+        padding: 5px;
+        flex: .1;
+    }
+
+    header span {
+        background: none;
+        height: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+</style>
+<div id="root">
+    <app-top-bar></app-top-bar>
+    <app-work-bar>
+        <a slot="active" href="/patients">Patienteliste</a>
+    </app-work-bar>
+    <app-patient-list-bar></app-patient-list-bar>
+    <header>
+        <span class="check"></span>
+        <span>#</span>
+        <span>Lastname</span>
+        <span>Firstname</span>
+        <span>Birthdate</span>
+        <span>Ort / Plz / Str.</span>
+        <span>Mobil Nr. / Tel. Nr.</span>
+    </header>
+    <div id="list"></div>
+</div>

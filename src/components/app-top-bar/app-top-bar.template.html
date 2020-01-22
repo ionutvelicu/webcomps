@@ -1,0 +1,81 @@
+<style>
+    .logo {
+        height: 20px;
+        position: relative;
+        top: 8px;
+      }
+      .logo img {
+        height: 100%;
+      }
+
+      .top-bar {
+        display: flex;
+        background: #FFF;
+        padding: 10px 20px;
+      }
+
+      ul {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      ul a {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--text-color);
+        font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 13px;
+        padding: 8px 10px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      ul a:hover,
+      ul a.selected {
+        color: var(--primary);
+      }
+
+      nav.main {
+        margin-left: var(--small-padding);
+      }
+
+      nav.secondary {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+      }
+
+      .avatar {
+        width: 36px;
+      }
+
+      .logout {
+        display: flex;
+      }
+
+      .logout svg {
+        width: 20px;
+        height: 20px;
+        margin-left: 5px;
+      }
+</style>
+<section class="top-bar">
+    <a class="logo"><img src="/assets/logo-white.jpg" /></a>
+    <nav class="main">
+        <ul>
+            <li><a href="/calendar" class="calendar">Terminverwaltung</a></li>
+            <li><a href="/patients" class="patient">Patientenverwaltung</a></li>
+            <li><a href="/prescriptions" class="prescription">Rezeptverwaltung</a></li>
+        </ul>
+    </nav>
+    <nav class="secondary">
+      <img class="avatar" src="/assets/female.svg" />
+      <ul>
+        <li><a href="/" class="logout">Abmelden <svg viewBox="0 0 20 20"><path d="M9.9,5.5l4.2,4.2H1v1H14.1L9.9,14.8l.7.7L16,10.2,10.6,4.8Zm9.1-4v17H1V11.7H2v5.8H18V2.5H2V8.7H1V1.5H19Z"></path></svg></a></li>
+      </ul>
+    </nav>
+</section>
